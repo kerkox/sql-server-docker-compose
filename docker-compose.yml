@@ -21,5 +21,8 @@ services:
     ports:
       - '1433:1433'
     volumes:
-      - /srv/sqlserver:/var/opt/mssql
+      - /srv/sqlserver/data:/var/opt/mssql/data
+      - /srv/sqlserver/log:/var/opt/mssql/log
+      - /srv/sqlserver/backup:/var/opt/mssql/backup
+      - /srv/sqlserver/secrets:/var/opt/mssql/secrets
       - /srv/shared:/usr/shared
